@@ -38,10 +38,10 @@ fn raw_key_bindings() -> HashMap<String, Box<dyn KeyEventHandler<RustConn>>> {
     let mut raw_bindings = map! {
         map_keys: |k: &str| k.to_owned();
 
-        "M-j" => modify_with(|cs| cs.focus_down()),
-        "M-k" => modify_with(|cs| cs.focus_up()),
-        "M-S-j" => modify_with(|cs| cs.swap_down()),
-        "M-S-k" => modify_with(|cs| cs.swap_up()),
+        "M-n" => modify_with(|cs| cs.focus_down()),
+        "M-e" => modify_with(|cs| cs.focus_up()),
+        "M-S-n" => modify_with(|cs| cs.swap_down()),
+        "M-S-e" => modify_with(|cs| cs.swap_up()),
         "M-S-q" => modify_with(|cs| cs.kill_focused()),
         "M-Tab" => modify_with(|cs| cs.toggle_tag()),
         "M-bracketright" => modify_with(|cs| cs.next_screen()),
