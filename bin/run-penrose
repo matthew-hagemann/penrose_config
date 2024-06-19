@@ -5,7 +5,7 @@ eval $(ssh-agent)
 
 while true; do
   # log out to a file
-  penrose-from-scratch &> ~/.penrose.log
+  penrose_config &> ~/.penrose.log
   [[ $? > 0 ]] && mv ~/.penrose.log ~/prev-penrose.log
   export RESTARTED=true
 done
