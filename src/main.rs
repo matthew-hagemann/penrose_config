@@ -32,7 +32,7 @@ const RATIO: f32 = 0.6;
 const RATIO_STEP: f32 = 0.1;
 const OUTER_PX: u32 = 5;
 const INNER_PX: u32 = 5;
-const BAR_HEIGHT_PX: u32 = 18;
+const BAR_HEIGHT_PX: u32 = 50;
 
 fn raw_key_bindings() -> HashMap<String, Box<dyn KeyEventHandler<RustConn>>> {
     let mut raw_bindings = map! {
@@ -103,7 +103,7 @@ fn main() -> Result<()> {
         padding: (2, 2),
     };
 
-    let bar = status_bar(BAR_HEIGHT_PX, FONT, 8, style, BLUE, GREY, Position::Top).unwrap();
+    let bar = status_bar(BAR_HEIGHT_PX, FONT, 12, style, BLUE, GREY, Position::Top).unwrap();
 
     let wm = bar.add_to(WindowManager::new(
         config,
