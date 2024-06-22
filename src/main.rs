@@ -1,7 +1,6 @@
 use penrose::{
     builtin::{
-        actions::{exit, log_current_state, modify_with, send_layout_message, spawn},
-        layout::{
+        actions::{exit, log_current_state, modify_with, send_layout_message, spawn},        layout::{
             messages::{ExpandMain, IncMain, ShrinkMain},
             transformers::{Gaps, ReserveTop},
             MainAndStack, Monocle,
@@ -22,17 +21,17 @@ use std::collections::HashMap;
 use tracing_subscriber::{self, prelude::*};
 
 const FONT: &str = "ProFontIIx Nerd Font";
-const BLACK: u32 = 0x282828ff;
-const WHITE: u32 = 0xebdbb2ff;
-const GREY: u32 = 0x3c3836ff;
-const BLUE: u32 = 0x458588ff;
+const BLACK: u32 = 0x44475aff;
+const WHITE: u32 = 0xffffffff;
+const GREY: u32 = 0x8be9fdff;
+const BLUE: u32 = 0xbd93f9ff;
 
 const MAX_MAIN: u32 = 1;
 const RATIO: f32 = 0.6;
 const RATIO_STEP: f32 = 0.1;
 const OUTER_PX: u32 = 5;
 const INNER_PX: u32 = 5;
-const BAR_HEIGHT_PX: u32 = 50;
+const BAR_HEIGHT_PX: u32 = 25;
 
 fn raw_key_bindings() -> HashMap<String, Box<dyn KeyEventHandler<RustConn>>> {
     let mut raw_bindings = map! {
