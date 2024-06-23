@@ -21,10 +21,10 @@ use std::collections::HashMap;
 use tracing_subscriber::{self, prelude::*};
 
 const FONT: &str = "ProFontIIx Nerd Font";
-const BLACK: u32 = 0x44475aff;
-const WHITE: u32 = 0xffffffff;
-const GREY: u32 = 0x8be9fdff;
-const BLUE: u32 = 0xbd93f9ff;
+const BLACK: u32 = 0x282828ff;
+const WHITE: u32 = 0xa89984ff;
+const GREY: u32 = 0xb16286ff;
+const RED: u32 = 0xcc241dff;
 
 const MAX_MAIN: u32 = 1;
 const RATIO: f32 = 0.6;
