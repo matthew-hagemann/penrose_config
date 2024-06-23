@@ -90,6 +90,7 @@ fn main() -> Result<()> {
         .init();
 
     let config = add_ewmh_hooks(Config {
+        focused_border: BLUE.into(),
         default_layouts: layouts(),
         ..Config::default()
     });
